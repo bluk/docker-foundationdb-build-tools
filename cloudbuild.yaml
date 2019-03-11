@@ -43,9 +43,9 @@ steps:
   args:
     - 'tag'
     - 'gcr.io/$PROJECT_ID/fdb-build-tools:6'
-    - 'gcr.io/$PROJECT_ID/fdb-build-tools:6.0.15'
+    - 'gcr.io/$PROJECT_ID/fdb-build-tools:6.0.18'
   wait_for: ['6']
-  id: '6.0.15'
+  id: '6.0.18'
 
 # Test latest
 - name: 'gcr.io/cloud-builders/docker'
@@ -58,9 +58,9 @@ steps:
   wait_for: ['latest']
 
 substitutions:
-  _FDB_VERSION: 6.0.15
-  _FDB_CLIENTS_PKG_SHA256SUM: 1b5e799900f8be328d6c32220c399e83cdbaf320b34ffcadc7c1851414d423bd
-  _FDB_SERVER_PKG_SHA256SUM: d08c9ceff5c83645cd100eae969d660ab03189251447861e9ab953b60bd3ea7f
+  _FDB_VERSION: 6.0.18
+  _FDB_CLIENTS_PKG_SHA256SUM: 8cf2070cb3659b0051db4804d0126fe7ce0079e780ba08bd23b7757923c3376e
+  _FDB_SERVER_PKG_SHA256SUM: b2f35e94083f615449c3abb4d5499420d2ac1ed58272f6c4496ad857b9b989d3
 
 images:
 - 'gcr.io/$PROJECT_ID/fdb-build-tools:latest'
